@@ -80,3 +80,134 @@ signature-container {
             letter-spacing: 1px;
         }
         
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #34495e;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            color: #FF6B35;
+        }
+        
+        .contact-icon {
+            width: 16px;
+            height: 16px;
+            fill: #7f8c8d;
+            transition: fill 0.3s ease;
+        }
+        
+        .contact-item:hover .contact-icon {
+            fill: #FF6B35;
+        }
+        
+        .contact-item a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            color: #FF6B35;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ecf0f1;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #ecf0f1;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .social-link.linkedin {
+            background: #0077b5;
+        }
+        
+        .social-link.twitter {
+            background: #1da1f2;
+        }
+        
+        .social-link.facebook {
+            background: #1877f2;
+        }
+        
+        .social-link.instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        
+        .social-link.website {
+            background: #34495e;
+        }
+        
+        .social-icon {
+            width: 18px;
+            height: 18px;
+            fill: white;
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, #FF6B35, transparent);
+            margin: 15px 0 10px 0;
+            border-radius: 1px;
+        }
+        
+        .disclaimer {
+            font-size: 11px;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+        
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-3px); }
+        }
+        
+        @keyframes logoShine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        @media (max-width: 600px) {
+            .signature-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+        }
