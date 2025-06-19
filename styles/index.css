@@ -1,0 +1,82 @@
+signature-container {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 600px;
+            border-left: 4px solid #FF6B35;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            box-shadow: 0 2px 8px rgba(255, 107, 53, 0.1);
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        
+        .signature-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-container {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #FF6B35, #FF8C42);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            animation: logoFloat 3s ease-in-out infinite;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+        
+        .logo {
+            width: 70px;
+            height: 70px;
+            background-image: url('../assets/tshirtdeal\ email.gif');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: logoShine 4s linear infinite;
+        }
+        
+        .name-title {
+            flex-grow: 1;
+        }
+        
+        .name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+        
+        .title {
+            font-size: 16px;
+            color: #7f8c8d;
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+        
+        .company {
+            font-size: 14px;
+            color: #FF6B35;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
